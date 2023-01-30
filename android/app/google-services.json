@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1066987203735",
+    "project_id": "xdnotes-flutter-project",
+    "storage_bucket": "xdnotes-flutter-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066987203735:android:a4cec0899d53cc3c1c0dd2",
+        "android_client_info": {
+          "package_name": "com.diamonx.xdnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066987203735-qg8q0q47e4eq5u40u6792uupdqciduvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK2N3cco1z95vanp_1u_lM-DHehdEpdbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066987203735-qg8q0q47e4eq5u40u6792uupdqciduvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
