@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'dart:developer' as devtools show log;
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -14,7 +15,6 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _email = TextEditingController();
     _password = TextEditingController();
     super.initState();
@@ -22,7 +22,6 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _email.dispose();
     _password.dispose();
     super.dispose();
@@ -41,26 +40,30 @@ class _LoginViewState extends State<LoginView> {
             enableSuggestions: false,
             autocorrect: false,
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(hintText: "email"),
+            decoration: const InputDecoration(hintText: "email"),
           ),
           TextField(
             controller: _password,
             obscureText: true,
             enableSuggestions: false,
             autocorrect: false,
-            decoration: InputDecoration(hintText: "password"),
+            decoration: const InputDecoration(hintText: "password"),
           ),
           TextButton(
             onPressed: () async {
               final email = _email.text;
               final password = _password.text;
               try {
-                final userCredential = await FirebaseAuth.instance
-                    .signInWithEmailAndPassword(
-                        email: email, password: password);
-                print(userCredential);
+                await FirebaseAuth.instance.signInWithEmailAndPassword(
+                  email: email,
+                  password: password,
+                );
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  "/notes/",
+                  (_) => false,
+                );
               } on FirebaseAuthException catch (e) {
-                print(e.code);
+                devtools.log(e.code.toString());
               }
             },
             child: const Text("Login"),
