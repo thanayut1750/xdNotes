@@ -5,6 +5,7 @@ import 'package:xdnotes/constants/routes.dart';
 import 'package:xdnotes/firebase_options.dart';
 import 'package:xdnotes/views/login_view.dart';
 import 'package:xdnotes/views/register_view.dart';
+import 'package:xdnotes/views/verify_email_view.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +16,12 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       home: const HomePage(),
+      
       routes: {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         notesRoute:(context) => const NotesView(),
+        VerifyEmailRoute:(context) => const VerifyEmailView(),
       },
     ),
   );
