@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:xdnotes/constants/routes.dart';
 import 'package:xdnotes/services/auth/auth_service.dart';
 import 'package:xdnotes/views/login_view.dart';
-import 'package:xdnotes/views/notes_view.dart';
+import 'package:xdnotes/views/notes/new_note_view.dart';
+import 'package:xdnotes/views/notes/notes_view.dart';
 import 'package:xdnotes/views/register_view.dart';
 import 'package:xdnotes/views/verify_email_view.dart';
 
@@ -19,7 +20,8 @@ void main() {
         loginRoute: (context) => const LoginView(),
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
-        VerifyEmailRoute: (context) => const VerifyEmailView(),
+        verifyEmailRoute: (context) => const VerifyEmailView(),
+        newNotesRoute: (context) => const NewNoteView(),
       },
     ),
   );
