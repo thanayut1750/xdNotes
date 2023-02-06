@@ -15,3 +15,6 @@ class UserAlreadyExists implements Exception {}
 class CloudNotFindNote implements Exception {}
 
 class CouldNotUpdateNote implements Exception {}
+
+class CouldNotFindNote implements Exception {}
+
