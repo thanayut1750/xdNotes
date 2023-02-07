@@ -1,9 +1,11 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:xdnotes/constants/routes.dart';
 import 'package:xdnotes/services/auth/auth_exceptions.dart';
 import 'package:xdnotes/services/auth/auth_service.dart';
+import 'package:xdnotes/utilities/dialogs/error_dialog.dart';
 
-import '../utilities/show_error_dialog.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
