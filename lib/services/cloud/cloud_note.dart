@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 @immutable
 class CloudNote {
   final String documentId;
-  late final String ownerUserId;
+  final String ownerUserId;
   final String text;
   const CloudNote({
     required this.documentId,
